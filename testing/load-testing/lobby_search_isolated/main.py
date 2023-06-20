@@ -32,5 +32,5 @@ class LobbyUser(HttpUser):
         }
 
     @task
-    def post_trade_order(self):
+    def search_lobby_by_kw(self):
         self.client.get(f"/lobby?keyword={random.choice(keywords)}")
